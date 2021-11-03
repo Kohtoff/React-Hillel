@@ -1,0 +1,124 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+.transited {
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+aside {
+  background-color: #e4e4e4;
+  width: 25%;
+  height: 100vmin;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 2% 5%;
+}
+
+.main-title {
+  color: #fff;
+  text-shadow: black 0px 0px 5px;
+  font-size: 36px;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2vw;
+  margin-top: 30px;
+}
+
+.navbar__item {
+  width: 60%;
+}
+
+.navbar__link {
+  width: 100%;
+  color: #000;
+  opacity: 0.6;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.navbar__link:hover, .navbar__link:focus {
+  opacity: 1;
+}
+
+.show-form-btn {
+  background: none;
+  outline: none;
+  border: none;
+  margin-top: 40px;
+  color: #000;
+  opacity: 0.4;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.show-form-btn::first-letter {
+  font-size: 18px;
+}
+
+.show-form-btn:hover, .show-form-btn:focus {
+  opacity: 1;
+}
+
+.add-note-form {
+  background-color: #fff;
+  border-radius: 25px;
+  position: absolute;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.add-note-form__input {
+  height: 30px;
+  border: none;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  padding-left: 4px;
+  outline: none;
+}
+
+.add-note-form__input:focus {
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.add-note-form__submit {
+  background-color: #10521b;
+  height: 25px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.add-note-form__submit:hover, .add-note-form__submit:focus {
+  background-color: #1d9227;
+}
+/*# sourceMappingURL=App.css.map */

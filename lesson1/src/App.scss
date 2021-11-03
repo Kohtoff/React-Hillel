@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1{
+    margin: 0;
+}
+
+.transited{
+    transition: all .25s ease-in;
+}
+
+aside{
+    background-color: #e4e4e4;
+    width: 25%;
+    height: 100vmin;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 2% 5%;
+}
+
+.main-title{
+    color: #fff;
+    text-shadow: black 0px 0px 5px;
+    font-size: 36px;
+}
+
+
+
+
+
