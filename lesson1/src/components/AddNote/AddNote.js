@@ -4,7 +4,10 @@ import "./AddNote.css";
 const AddNote = () => {
   const [formVisibility, setFormVisibility] = useState(true);
   const [noteData, setNoteData] = useState({title: '', description: ''});
-  const toggleForm = () => setFormVisibility(!formVisibility);
+  const toggleForm = () => {
+    setFormVisibility(!formVisibility)
+    setNoteData(null)
+  };
   const addNote = (e) => {
     e.preventDefault();
     const note = {
@@ -29,7 +32,6 @@ const AddNote = () => {
             type="text"
             placeholder="Title"
             name="title"
-            value={noteData.title}
             onChange={({ target }) =>
               setNoteData({ ...noteData, title: target.value })
             }
@@ -39,7 +41,6 @@ const AddNote = () => {
             type="text"
             placeholder="Description"
             name="description"
-            value={noteData.description}
             onChange={({ target }) =>
               setNoteData({ ...noteData, description: target.value })
             }
