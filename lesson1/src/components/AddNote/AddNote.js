@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./AddNote.css";
 
-const AddNote = () => {
-  const [formVisibility, setFormVisibility] = useState(true);
+const AddNote = ({ onAdd }) => {
+  const [formVisibility, setFormVisibility] = useState(false);
   const [noteData, setNoteData] = useState({title: '', description: ''});
   const toggleForm = () => {
     setFormVisibility(!formVisibility)
@@ -15,6 +15,7 @@ const AddNote = () => {
     }
     console.log(note);
 
+    onAdd(note);
     setNoteData(null);
     setFormVisibility(false)
   };

@@ -10,6 +10,10 @@ h1{
     margin: 0;
 }
 
+.container{
+    display: flex;
+}
+
 .transited{
     transition: all .25s ease-in;
 }
@@ -27,6 +31,10 @@ aside{
     color: #fff;
     text-shadow: black 0px 0px 5px;
     font-size: 36px;
+}
+
+.main{
+    padding: 3vw 2.2vw;
 }
 
 

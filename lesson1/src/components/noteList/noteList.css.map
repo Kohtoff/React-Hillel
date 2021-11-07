@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,UAAM,CAAA;EACF,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,GAAG,EAAE,GAAG;CACX;;AACA,AAAD,UAAM,CAAA;EACF,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,GAAG,CAAC,KAAK,CAAc,kBAAO;EACtC,UAAU,EAAE,gBAAgB;EAC5B,OAAO,EAAE,GAAG;CAMf;;AAJI,AAAD,iBAAQ,CAAA;EACJ,SAAS,EAAE,KAAK;CAEnB",
+    "sources": [
+        "noteList.scss"
+    ],
+    "names": [],
+    "file": "noteList.css"
+}

@@ -1,0 +1,23 @@
+.note-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2vw;
+}
+
+.note-item {
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 1px 5px -2px;
+          box-shadow: 1px 1px 5px -2px;
+  padding: 1vw;
+}
+
+.note-item__title {
+  font-size: 2.3vw;
+}
+/*# sourceMappingURL=noteList.css.map */

@@ -1,0 +1,19 @@
+.note{
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    &-item{
+        border-radius: 20px;
+        border: 1px solid rgba($color: #000000, $alpha: 0.4);
+        box-shadow: 1px 1px 5px -2px;
+        padding: 1vw;
+
+        &__title{
+            font-size: 2.3vw;
+            
+        }
+    }
+
+}
