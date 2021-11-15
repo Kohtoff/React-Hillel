@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import NoteList from "./components/noteList/noteList";
 
 function App() {
-  const pageArr = ["home", "about us", "contacts"];
+  const pageArr = ["Notes", "News", "contacts"];
   const testNote = [
     {
       title: 'First note',
