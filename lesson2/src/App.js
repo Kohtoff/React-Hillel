@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import ArticlesList from "./components/ArticlesList/ArticlesList";
 import Tree from './components/Tree/Tree';
+import NewsPage from "./components/NewsPage/NewsPage";
 
 function App() {
   const [treeData, setNavData] = useState(null);
@@ -24,11 +24,7 @@ function App() {
       <aside id="aside">
         {treeData ? <Tree data={treeData}/> : undefined}
       </aside>
-      <main id="main">
-        
-        <h1 className="main-title">Latest News</h1>
-        <ArticlesList dataPath="./news.json" />
-      </main>
+      <NewsPage></NewsPage>
     </div>
   );
 }

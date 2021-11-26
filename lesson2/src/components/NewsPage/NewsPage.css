@@ -81,4 +81,8 @@
   color: #43c4c9;
   text-align: center;
 }
-/*# sourceMappingURL=ArticlesList.css.map */
+
+.filter__item--active {
+  background-color: #43c97f;
+}
+/*# sourceMappingURL=NewsPage.css.map */
