@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class NewsFilters extends Component {
   state = {
@@ -22,4 +23,17 @@ export default class NewsFilters extends Component {
       </button>
     );
   }
+}
+
+NewsFilters.PropTypes = {
+  handlerOnClick: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.number,
+    PropTypes.string,
+  ]),
+};
+
+NewsFilters.defaultProps = {
+  children: 'Filter button'
 }

@@ -8,7 +8,7 @@ const filters = [
   { label: "With link", value: "linkFilter" },
   { label: "Special post", value: "specialFilter" },
 ];
-//фильтровать данные новостей при изменении состояния
+
 export default class NewsPage extends Component {
   state = {
     checked: {

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class NewsItem extends Component {
   render() {
@@ -59,3 +60,22 @@ export default class NewsItem extends Component {
     );
   }
 }
+
+NewsItem.PropTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    content: PropTypes.string,
+    isSpecial: PropTypes.bool,
+    dateCreated: PropTypes.string,
+    categories: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+      })
+    ),
+    link: PropTypes.any,
+    photo: PropTypes.string,
+    author: PropTypes.string,
+  }),
+};
