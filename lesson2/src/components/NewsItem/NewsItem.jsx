@@ -61,7 +61,7 @@ export default class NewsItem extends Component {
   }
 }
 
-NewsItem.PropTypes = {
+NewsItem.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,

@@ -25,7 +25,7 @@ export default class NewsFilters extends Component {
   }
 }
 
-NewsFilters.PropTypes = {
+NewsFilters.propTypes = {
   handlerOnClick: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.element,
