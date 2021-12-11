@@ -13,6 +13,7 @@ export default class NewsFilters extends Component {
       handlerOnClick(value);
       this.setState({ checked: !checked });
     };
+    
 
     return (
       <button

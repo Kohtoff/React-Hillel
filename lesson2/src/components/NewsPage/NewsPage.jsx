@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NewsFilters from "../NewsFilters/NewsFilters";
 import NewsList from "../NewsList/NewsList";
+import SearchBar from "../searchBar/searchBar";
 import "./NewsPage.css";
 
 const filters = [
@@ -17,6 +18,7 @@ export default class NewsPage extends Component {
       specialFilter: false,
     },
     newsData: null,
+    inputValue: null,
   };
 
   componentDidMount() {
@@ -45,20 +47,30 @@ export default class NewsPage extends Component {
     });
   };
 
+  updateInput = (value) => {
+    this.setState({
+      inputValue: value
+    })
+  }
+
+
   render() {
-    const { newsData } = this.state;
+    const { newsData, inputValue } = this.state;
     const { photoFilter, linkFilter, specialFilter } = this.state.checked;
     const filteredData = () => {
       return newsData.filter((item) => {
         if (photoFilter && !item.photo) return false;
         if (linkFilter && !item.link) return false;
         if (specialFilter && !item.isSpecial) return false;
+        if (inputValue && !item.title.toLowerCase().includes(inputValue)) return false;
         return true;
       });
     };
+
     return (
       <main id="main">
         <h1 className="main-title">Latest News</h1>
+        <SearchBar value={inputValue} handlerOnChange={(e) => this.updateInput(e.target.value)}/>
         {filters &&
           filters.map((item, index) => {
             return (
