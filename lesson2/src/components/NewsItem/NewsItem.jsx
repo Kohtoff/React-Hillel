@@ -54,6 +54,9 @@ export default class NewsItem extends Component {
             <p className="article-card__date">
               Created: <span>{formatDate()}</span>
             </p>
+            <p className="article-card__date">
+              By: <span>{data.author}</span>
+            </p>
           </article>
         </li>
       </ConditionalWrapper>

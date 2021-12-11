@@ -49,10 +49,9 @@ export default class NewsPage extends Component {
 
   updateInput = (value) => {
     this.setState({
-      inputValue: value
-    })
-  }
-
+      inputValue: value.toLowerCase(),
+    });
+  };
 
   render() {
     const { newsData, inputValue } = this.state;
@@ -62,7 +61,7 @@ export default class NewsPage extends Component {
         if (photoFilter && !item.photo) return false;
         if (linkFilter && !item.link) return false;
         if (specialFilter && !item.isSpecial) return false;
-        if (inputValue && !item.title.toLowerCase().includes(inputValue)) return false;
+        if (inputValue && (!item.content.toLowerCase().includes(inputValue) && !item.title.toLowerCase().includes(inputValue) && !item.author.toLowerCase().includes(inputValue))) return false;
         return true;
       });
     };
@@ -70,7 +69,10 @@ export default class NewsPage extends Component {
     return (
       <main id="main">
         <h1 className="main-title">Latest News</h1>
-        <SearchBar value={inputValue} handlerOnChange={(e) => this.updateInput(e.target.value)}/>
+        <SearchBar
+          value={inputValue}
+          handlerOnChange={(e) => this.updateInput(e.target.value)}
+        />
         {filters &&
           filters.map((item, index) => {
             return (
