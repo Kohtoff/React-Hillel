@@ -1,0 +1,14 @@
+.add-form{
+    position: absolute;
+    background-color: #e4e4e4;
+    padding: 1% 2%;
+    border-radius: 25px;
+    box-shadow: 1px 6px 9px -2px;
+    display: flex;
+    flex-direction: column;
+
+    &__row{
+        display: flex;
+        flex-direction: column;
+    }
+}

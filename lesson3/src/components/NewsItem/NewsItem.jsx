@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 export default class NewsItem extends Component {
   render() {
     const { data } = this.props;
+
     const ConditionalWrapper = ({ wrapper, children }) =>
       data.link ? wrapper(children) : children;
 
     const categories = data.categories;
+
     const formatDate = () => {
       let jsonDate = data.dateCreated.replace(" ", "");
       jsonDate = new Date(jsonDate);
@@ -31,8 +33,8 @@ export default class NewsItem extends Component {
             <ul className="categories-bar">
               {categories.map((item) => {
                 return (
-                  <li className="categories-bar__item" key={item.id || new Date().getTime()}>
-                    {item.name || item}
+                  <li className="categories-bar__item" key={item.id}>
+                    {item.name}
                   </li>
                 );
               })}
@@ -69,12 +71,12 @@ NewsItem.propTypes = {
     content: PropTypes.string,
     isSpecial: PropTypes.bool,
     dateCreated: PropTypes.string,
-    // categories: PropTypes.arrayOf(
-    //   PropTypes.shape({
-    //     id: PropTypes.string,
-    //     name: PropTypes.string,
-    //   })
-    // ),
+    categories: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+      })
+    ),
     link: PropTypes.any,
     photo: PropTypes.string,
     author: PropTypes.string,

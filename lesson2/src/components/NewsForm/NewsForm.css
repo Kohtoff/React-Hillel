@@ -1,0 +1,26 @@
+.add-form {
+  position: absolute;
+  background-color: #e4e4e4;
+  padding: 1% 2%;
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 6px 9px -2px;
+          box-shadow: 1px 6px 9px -2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.add-form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=NewsForm.css.map */

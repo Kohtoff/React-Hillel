@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import NewsForm from "../../../../lesson2/src/components/NewsForm/NewsForm";
 import NewsFilters from "../NewsFilters/NewsFilters";
-import NewsForm from "../NewsForm/NewsForm";
 import NewsList from "../NewsList/NewsList";
 import SearchBar from "../searchBar/searchBar";
 import "./NewsPage.css";
@@ -22,21 +22,6 @@ export default class NewsPage extends Component {
     inputValue: null,
   };
 
-  componentDidMount() {
-    fetch("./news.json", {
-      headers: {
-        "Content-type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((recievedData) => {
-        this.setState({ newsData: recievedData });
-      })
-      .catch((err) => console.log(err));
-  }
 
   toggleCheck = (value) => {
     this.setState({
@@ -53,12 +38,6 @@ export default class NewsPage extends Component {
     });
   };
 
-  createNews = (data) => {
-    this.setState({
-      newsData: [data, ...this.state.newsData]
-    })
-  }
-
   render() {
     const { newsData, inputValue } = this.state;
     const { photoFilter, linkFilter, specialFilter } = this.state.checked;
@@ -71,6 +50,7 @@ export default class NewsPage extends Component {
         return true;
       });
     };
+
     return (
       <main id="main">
         <h1 className="main-title">Latest News</h1>
@@ -78,7 +58,7 @@ export default class NewsPage extends Component {
           value={inputValue}
           handlerOnChange={(e) => this.updateInput(e.target.value)}
         />
-        <NewsForm onAddNews={this.createNews}/>
+        <NewsForm />
         {filters &&
           filters.map((item, index) => {
             return (
