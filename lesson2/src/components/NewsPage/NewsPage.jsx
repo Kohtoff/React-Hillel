@@ -59,6 +59,12 @@ export default class NewsPage extends Component {
     })
   }
 
+  removePost = (targetID) => {
+    this.setState({
+      newsData: this.state.newsData.filter(item => item.id !== targetID)
+    })
+  }
+
   render() {
     const { newsData, inputValue } = this.state;
     const { photoFilter, linkFilter, specialFilter } = this.state.checked;
@@ -90,7 +96,7 @@ export default class NewsPage extends Component {
               </NewsFilters>
             );
           })}
-        {newsData && <NewsList data={filteredData()} />}
+        {newsData && <NewsList onRemove={this.removePost} data={filteredData()} />}
       </main>
     );
   }

@@ -4,10 +4,10 @@ import NewsItem from "../NewsItem/NewsItem";
 
 export default class NewsList extends Component {
   render() {
-    const { data } = this.props;
+    const { data, onRemove } = this.props;
     return (
       <ul className="article-list">
-        {data && data.map((item) => <NewsItem key={item.id} data={item} />)}
+        {data && data.map((item) => <NewsItem key={item.id} onRemove={onRemove} data={item} />)}
       </ul>
     );
   }

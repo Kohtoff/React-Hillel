@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default class NewsItem extends Component {
   render() {
-    const { data } = this.props;
+    const { data, onRemove } = this.props;
     const ConditionalWrapper = ({ wrapper, children }) =>
       data.link ? wrapper(children) : children;
 
@@ -28,6 +28,7 @@ export default class NewsItem extends Component {
               "article-card " + (data.isSpecial ? "article-card--special" : "")
             }
           >
+            <button onClick={() => onRemove(data.id)} className="remove-btn">Remove</button>
             <ul className="categories-bar">
               {categories.map((item) => {
                 return (

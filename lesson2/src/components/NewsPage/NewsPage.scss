@@ -26,6 +26,7 @@
     justify-items: center;
     padding: 1vw;
     text-align: center;
+    position: relative;
   
     &--special {
       & > h2 {
@@ -70,4 +71,15 @@
     &--active{
         background-color: #43c97f;
     }
+}
+
+.remove-btn{
+  position: absolute;
+  bottom: 0;
+  position: absolute;
+  bottom: 10px;
+  background: rgb(231, 115, 111);
+  color: white;
+  border: none;
+  cursor: pointer;
 }

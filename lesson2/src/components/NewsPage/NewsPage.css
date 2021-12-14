@@ -38,6 +38,7 @@
   justify-items: center;
   padding: 1vw;
   text-align: center;
+  position: relative;
 }
 
 .article-card--special > h2 {
@@ -84,5 +85,16 @@
 
 .filter__item--active {
   background-color: #43c97f;
+}
+
+.remove-btn {
+  position: absolute;
+  bottom: 0;
+  position: absolute;
+  bottom: 10px;
+  background: #e7736f;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 /*# sourceMappingURL=NewsPage.css.map */
