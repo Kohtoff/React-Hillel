@@ -1,0 +1,38 @@
+.ship-card {
+    max-width: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    max-height: 340px;
+    transition: .4s ease-in all;
+
+    &:hover{
+        max-height: 800px;
+        box-shadow: black 3px 4px 15px -10px;
+        // border: 1px solid #eed7d7;
+
+    }
+
+  &__img {
+    background-color: #e4e4e4;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 60%;
+      height: 60%;
+      opacity: 0.4;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__model{
+      opacity: 0.6;
+      text-align: center;
+  }
+}

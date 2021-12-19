@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import Tree from './components/Tree/Tree';
-import NewsPage from "./components/NewsPage/NewsPage";
+import Header from "./components/Header/Header";
+import ShipsPage from "./components/ShipsPage/ShipsPage";
 
 function App() {
-
   return (
     <div className="App">
-      <NewsPage></NewsPage>
+      <Header />
+      <main id="main">
+        <ShipsPage />
+      </main>
     </div>
   );
 }

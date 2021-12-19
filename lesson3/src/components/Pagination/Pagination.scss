@@ -1,0 +1,34 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+    height: 45px;
+    
+
+    &__btn{
+        background: white;
+        border: #62b6ff 1px solid;
+        width: 5vw;
+        transition: .2s ease-in all;
+
+        &--prev, &--next{
+            width: 8vw;
+        }
+
+        &--next{
+            border-bottom-right-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+
+        &--prev{
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    
+}

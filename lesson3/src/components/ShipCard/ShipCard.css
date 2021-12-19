@@ -1,0 +1,45 @@
+.ship-card {
+  max-width: 400px;
+  border-radius: 25px;
+  overflow: hidden;
+  max-height: 340px;
+  -webkit-transition: .4s ease-in all;
+  transition: .4s ease-in all;
+}
+
+.ship-card:hover {
+  max-height: 800px;
+  -webkit-box-shadow: black 3px 4px 15px -10px;
+          box-shadow: black 3px 4px 15px -10px;
+}
+
+.ship-card__img {
+  background-color: #e4e4e4;
+  min-height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ship-card__img img {
+  width: 60%;
+  height: 60%;
+  opacity: 0.4;
+}
+
+.ship-card__name {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ship-card__model {
+  opacity: 0.6;
+  text-align: center;
+}
+/*# sourceMappingURL=ShipCard.css.map */

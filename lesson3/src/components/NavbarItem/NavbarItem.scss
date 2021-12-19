@@ -1,0 +1,8 @@
+.navbar__item{
+    text-transform: uppercase;
+    transition: .2s ease-in all;
+
+    &:hover{
+        color: rgb(98, 182, 255);
+    }
+}

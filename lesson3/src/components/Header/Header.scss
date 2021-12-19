@@ -1,0 +1,25 @@
+#header {
+  display: flex;
+  padding: 0 2vw;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 4px -1px 10px -1px;
+}
+
+.logo-container h2 {
+  color: rgb(98, 182, 255);
+  text-shadow: black 1px 1px 0px;
+}
+
+.navbar {
+  width: 60%;
+  display: flex;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-self: center;
+  }
+}
