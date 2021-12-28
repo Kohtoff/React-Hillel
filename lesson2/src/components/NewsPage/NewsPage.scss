@@ -75,11 +75,10 @@
 
 .remove-btn{
   position: absolute;
-  bottom: 0;
-  position: absolute;
   bottom: 10px;
   background: rgb(231, 115, 111);
   color: white;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }

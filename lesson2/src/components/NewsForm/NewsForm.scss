@@ -6,6 +6,7 @@
     box-shadow: 1px 6px 9px -2px;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 
     &__row{
         display: flex;

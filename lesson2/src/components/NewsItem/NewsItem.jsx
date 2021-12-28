@@ -1,12 +1,45 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import PropTypes from "prop-types";
+import gsap from "gsap";
 
 export default class NewsItem extends Component {
+  card = createRef();
+  cardImg = createRef();
+  cardTitle = createRef();
+  cardContent = createRef();
+
+  componentDidMount() {
+    let card = this.card.current;
+    let cardTitle = this.cardTitle.current;
+    let cardContent = this.cardContent.current;
+    console.log(this.card, this.cardTitle, this.cardContent);
+    let tl = gsap.timeline({});
+    console.log('YIMELINE', tl);
+
+    tl.from(card, {
+      stagger: 0.2,
+      opacity: 0,
+      x: -20,
+    }, "+=1");
+
+    tl.from(cardTitle, {
+      stagger: 0.2,
+      opacity: 0,
+      y: 20,
+    }, "+=1");
+
+    tl.from(cardContent, {
+      stagger: 0.2,
+      opacity: 0,
+      y: 20,
+    }, "+=1");
+  }
+  
+
   render() {
     const { data, onRemove } = this.props;
     const ConditionalWrapper = ({ wrapper, children }) =>
       data.link ? wrapper(children) : children;
-
     const categories = data.categories;
     const formatDate = () => {
       let jsonDate = data.dateCreated.replace(" ", "");
@@ -22,33 +55,40 @@ export default class NewsItem extends Component {
           </a>
         )}
       >
-        <li className="article-list__item" key={data.id}>
+        <li className="article-list__item" ref={this.card} key={data.id}>
           <article
             className={
               "article-card " + (data.isSpecial ? "article-card--special" : "")
             }
           >
-            <button onClick={() => onRemove(data.id)} className="remove-btn">Remove</button>
+            <button onClick={() => onRemove(data.id)} className="remove-btn">
+              Remove
+            </button>
             <ul className="categories-bar">
               {categories.map((item) => {
                 return (
-                  <li className="categories-bar__item" key={item.id || new Date().getTime()}>
+                  <li
+                    className="categories-bar__item"
+                    key={item.id || new Date().getTime()}
+                  >
                     {item.name || item}
                   </li>
                 );
               })}
             </ul>
-            {data.photo ? (
+            {/* {data.photo ? (
               <img
                 className="article-card__img"
                 alt=" banner"
                 src={data.photo}
+                ref={this.cardImg}
               ></img>
-            ) : null}
-            <h2 className="article-card__title">{data.title}</h2>
+            ) : null} */}
+            <h2 ref={this.cardTitle} className="article-card__title">{data.title}</h2>
             <div
               className="article-card__desc"
               dangerouslySetInnerHTML={{ __html: data.content }}
+              ref={this.cardContent}
             ></div>
             <p className="article-card__date">
               Created: <span>{formatDate()}</span>

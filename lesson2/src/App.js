@@ -21,9 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <aside id="aside">
+      {/* <aside id="aside">
         {treeData ? <Tree data={treeData}/> : undefined}
-      </aside>
+      </aside> */}
       <NewsPage></NewsPage>
     </div>
   );

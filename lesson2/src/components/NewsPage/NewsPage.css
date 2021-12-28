@@ -89,12 +89,11 @@
 
 .remove-btn {
   position: absolute;
-  bottom: 0;
-  position: absolute;
   bottom: 10px;
   background: #e7736f;
   color: white;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 /*# sourceMappingURL=NewsPage.css.map */
