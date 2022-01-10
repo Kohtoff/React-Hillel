@@ -1,0 +1,25 @@
+label {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  margin: auto;
+  flex-grow: 1;
+
+  input {
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+    border: none;
+    opacity: 0.2;
+    outline: none;
+    padding-left: 10px;
+    transition: all ease-in .2s;
+
+    &:hover,&:focus{
+        opacity: 1;
+    }
+  }
+}

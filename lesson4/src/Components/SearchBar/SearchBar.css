@@ -1,0 +1,38 @@
+label {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 50%;
+  margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+label input {
+  border-radius: 10px;
+  height: 30px;
+  width: 100%;
+  border: none;
+  opacity: 0.2;
+  outline: none;
+  padding-left: 10px;
+  -webkit-transition: all ease-in .2s;
+  transition: all ease-in .2s;
+}
+
+label input:hover, label input:focus {
+  opacity: 1;
+}
+/*# sourceMappingURL=SearchBar.css.map */

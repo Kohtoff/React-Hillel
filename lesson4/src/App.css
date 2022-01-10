@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+h1,
+h2,
+h3 {
+  color: #61dafb;
+}
+
+p,
+li,
+span {
+  color: #e4e4e4;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+input[type=checkbox]{
+  height: 20px;
+  width: 20px;
+}
