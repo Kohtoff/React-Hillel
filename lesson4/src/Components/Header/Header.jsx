@@ -9,7 +9,7 @@ export default function Header() {
         <h1>Hillel HW</h1>
       </div>
       <nav>
-        <ul className="nav">
+        <ul className="nav" style={{display: 'none'}}>
           <li>Part1</li>
           <li>Part2</li>
         </ul>
